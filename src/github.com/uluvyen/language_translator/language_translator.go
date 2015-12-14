@@ -5,9 +5,37 @@ import "fmt"
 func main() {
 	var characters = getallenglishcharacters()
 
+	fmt.Println("Please input the string you wish to convert: ")
+	var input string
+	fmt.Scanln(&input)
+
+	var indexlist []int
+	for _, c := range input {
+		var cString = string(c)
+//		fmt.Println("Checking ", cString)
+		var index = getindex(characters, cString)
+//		fmt.Println("Character's index is ", index)
+		indexlist = append(indexlist, index)
+	}
+
+	// for each element in the array, determine the image
+		
 
 	// waits for the user to request to leave.
 	waitforexit()
+}
+
+func getindex(characterlist [27]string, input string) int {
+	
+	var index int
+
+	for i, c := range characterlist {
+		if c == input {
+			index = i
+		}
+	}
+
+	return int(index)
 }
 
 func waitforexit() {
