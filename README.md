@@ -1,1 +1,2 @@
-# dnd-language-translator
+# Dungeons And Dragons Language Translator
+This is a personal project focused on creating a simple command line program that can spit out an image that can be handed over to players of a D&D Campaign for them to translate.
